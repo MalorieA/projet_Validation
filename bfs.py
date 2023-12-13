@@ -27,13 +27,13 @@ def bfs_search(graph, query):
         current_node = queue.popleft()
 
         if query(current_node):
-            return visited
+            return visited,current_node
         for neighbor in graph.neighbors(current_node):
             if neighbor not in visited:
                 queue.append(neighbor)
                 visited.add(neighbor)
 
-    return visited
+    return visited,None
 
 #exemple dutilisation
 # g = Graph(root=0)
