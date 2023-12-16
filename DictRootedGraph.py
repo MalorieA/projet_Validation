@@ -17,3 +17,6 @@ class DictRootedGraph(RootedGraph): # DictRootedGraph est un Class dérivée qui
         same_graph = self.graph == other.graph
         same_roots = self.roots == other.roots
         return is_same_type and same_graph and same_roots   # Renvoie True si other est de même type, et les attributs graph et roots sont égaux
+
+    def __hash__(self):
+        return 1
